@@ -88,7 +88,7 @@ inputs.forEach((input, textarea) => {
 
 })
 
-// ****Validacion del Formulario ***//
+// ****Validacion del Formulario ***//** */
 formulario.addEventListener('submit', (e) => {
     e.preventDefault()
     /*La función preventDefault() se utiliza para evitar el envío de un formulario si se detecta que no es válido. 
