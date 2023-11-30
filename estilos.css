@@ -444,6 +444,7 @@ form p a{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 .btn-enviar button{
     flex-basis: 48%;
@@ -473,6 +474,8 @@ form p a{
     background-color: grey;
     text-align: center;
     border-radius: 5px;
+    margin-bottom: 50px; 
+
 
 }
 /*Mensaje enviado correctamente*/
@@ -484,6 +487,7 @@ width: 100px;
 font-size: 12px;
 align-items: center;
 margin:10px 20px 10px 30px;
+margin-bottom: 50px;
 }
 /*   */
 .btn-enviar .msjNoExito{

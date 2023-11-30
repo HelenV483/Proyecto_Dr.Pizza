@@ -22,7 +22,9 @@ const validandoForm = (e) => {
         if (expReg.nombre.test(e.target.value) == false) {
             inputs[0].classList.add('inputError')
             document.getElementById('mensajeNombre').classList.remove('mensajeNoVisible')
-            campos.nombre = false;
+            console.log(campos.nombre)
+            
+            
         }
         else {
             inputs[0].classList.remove('inputError')
@@ -93,22 +95,28 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault()
     /*La función preventDefault() se utiliza para evitar el envío de un formulario si se detecta que no es válido. 
     También se puede emplear para prevenir el envío del formulario al presionar la tecla "Enter".  */
+       
         if (campos.nombre == true && campos.correo == true && campos.asunto == true && campos.comentario == true) {
-        //console.log('todo lleno correctamente')
-       // formulario.reset()
         document.getElementById("formulario").reset(); //una vez que se envia  se resetea
-        console.log('Nombre', campos.nombre);
-        window.alert('Enviado Correctamente', campos.nombre)
+        window.alert('Enviado Correctamente')
         document.getElementById('mensajeNoExito').classList.add('ocultarEXito')
         document.getElementById('mensajeExito').classList.remove('ocultarEXito')
         setTimeout(() => {
             document.getElementById('mensajeExito').classList.add('ocultarEXito');
         }, 3000)
-    }
+        clearcampos(campos)
+        }
     else {
         document.getElementById('mensajeNoExito').classList.remove('ocultarEXito')
-        // setTimeout(()=>{
-        // document.getElementById('mensajeNoExito').classList.add('ocultarEXito');
-        // }, 3000)
+        setTimeout(()=>{
+        document.getElementById('mensajeNoExito').classList.add('ocultarEXito');
+        }, 3000)
     }
+    function clearcampos (campos) {
+        campos.nombre = false;
+        campos.correo = false;
+        campos.asunto=false;
+        campos.comentario=false
+    }
+
 })
