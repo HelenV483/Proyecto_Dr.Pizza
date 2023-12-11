@@ -443,8 +443,8 @@ form p a{
 .btn-enviar{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
 }
 .btn-enviar button{
     flex-basis: 48%;
